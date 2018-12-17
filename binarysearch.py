@@ -4,8 +4,7 @@ def binarysearch(x,A,left,right):
         return mid
     elif(right==left):
         return
-    elif(x>A[mid]):
-        left=mid+1
+    elif(n < A[mid]):
+        return(binarysearch(x, A, left, mid))
     else:
-        right=mid
-    return (binarysearch(x, A, left, right))
+    return (binarysearch(x, A, mid+1, right))
